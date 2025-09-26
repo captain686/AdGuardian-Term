@@ -35,4 +35,4 @@ ENV ADGUARD_USERNAME admin
 ENV ADGUARD_PASSWORD password
 
 # Set the start command
-CMD ["ttyd", "-W","-c", "${ADGUARD_USERNAME}:${ADGUARD_PASSWORD}", "/usr/local/bin/adguardian"]
+CMD ["ttyd", "-W", "/usr/local/bin/adguardian"]
