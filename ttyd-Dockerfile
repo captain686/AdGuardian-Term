@@ -29,10 +29,10 @@ RUN git clone https://github.com/Lissy93/AdGuardian-Term.git && \
 # Expose port 7681
 EXPOSE 7681
 
-ENV ADGUARD_IP={define your adguard ip here}
-ENV ADGUARD_PORT={define the adguard port here, most likely 80}
-ENV ADGUARD_USERNAME={add you username of adguard here}
-ENV ADGUARD_PASSWORD={add your adguard password here}
+ENV ADGUARD_IP=127.0.0.1
+ENV ADGUARD_PORT=3000
+ENV ADGUARD_USERNAME=admin
+ENV ADGUARD_PASSWORD=password
 
 # Set the start command
 CMD ["ttyd", "-W","-c", "${ADGUARD_USERNAME}:${ADGUARD_PASSWORD}", "/usr/local/bin/adguardian"]
